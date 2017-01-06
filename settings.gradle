@@ -1,1 +1,3 @@
-include ':app'
+include ':bcg-app', ':bcg-core'
+project(':bcg-app').projectDir = new File('app')
+project(':bcg-core').projectDir = new File('core-lib')
