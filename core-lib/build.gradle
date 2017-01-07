@@ -35,4 +35,8 @@ dependencies {
 
     compile rootProject.ext.libraries.dagger
     provided rootProject.ext.aptLibraries.daggerCompiler
+
+    compile rootProject.ext.libraries.autovalue
+    provided rootProject.ext.aptLibraries.autovalueCompiler
+    provided rootProject.ext.aptLibraries.autovalueGson
 }
