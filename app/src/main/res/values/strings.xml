@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">BCG</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="offline_message">No internet connection, Offline data!</string>
+    <string name="go_online">Go Online</string>
+    <string name="retry_message">An error happened</string>
+    <string name="retry">Retry</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_invalid_password">Please enter a valid password</string>
+    <string name="pick_image">Select or take a picture</string>
+    <string name="logout">Logout</string>
+
 </resources>
