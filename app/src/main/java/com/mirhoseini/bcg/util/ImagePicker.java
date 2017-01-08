@@ -71,6 +71,10 @@ public class ImagePicker {
 
     public static Bitmap getImageFromResult(Context context,
                                             Intent imageReturnedIntent) {
+
+        if (imageReturnedIntent != null && imageReturnedIntent.getExtras() != null)
+            return (Bitmap) imageReturnedIntent.getExtras().get("data");
+
         File imageFile = getTempFile(context);
         Uri selectedImage;
         boolean isCamera = (imageReturnedIntent == null ||

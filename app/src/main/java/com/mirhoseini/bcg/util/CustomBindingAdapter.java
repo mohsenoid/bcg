@@ -4,6 +4,7 @@ import android.databinding.BindingAdapter;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.graphics.Palette;
+import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -18,8 +19,10 @@ public class CustomBindingAdapter {
 
     @BindingAdapter("bind:avatarUrl")
     public static void loadImage(ImageView imageView, String url) {
-        if (null == url) {
+        if (TextUtils.isEmpty(url)) {
             imageView.setImageResource(R.drawable.ic_avatar);
+            ViewGroup parent = (ViewGroup) imageView.getParent();
+            parent.setBackgroundColor(Color.GRAY);
         } else {
             Picasso.with(imageView.getContext())
                     .load(url)

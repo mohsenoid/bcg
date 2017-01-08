@@ -173,13 +173,7 @@ public class MainActivity extends BaseActivity {
         switch (requestCode) {
             case PICK_IMAGE_REQUEST_CODE:
                 if (resultCode == Activity.RESULT_OK) {
-                    Bitmap avatar;
-                    if (data.getExtras() == null) {
-                        avatar = ImagePicker.getImageFromResult(this, data);
-                    } else {
-                        avatar = (Bitmap) data.getExtras().get("data");
-                    }
-
+                    Bitmap avatar= ImagePicker.getImageFromResult(this, data);
                     profileFragment.setAvatar(avatar);
                 }
                 break;
