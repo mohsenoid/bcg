@@ -1,8 +1,8 @@
 package com.mirhoseini.bcg.user.login;
 
-
+import com.mirhoseini.bcg.BuildConfig;
+import com.mirhoseini.bcg.R;
 import com.mirhoseini.bcg.test.support.ShadowSnackbar;
-import com.mirhoseini.bcg.user.login.LoginActivity;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +15,6 @@ import static com.mirhoseini.bcg.test.support.Assert.assertAlertDialogIsShown;
 import static com.mirhoseini.bcg.test.support.Assert.assertSnackbarIsShown;
 import static com.mirhoseini.bcg.test.support.Assert.assertToastIsShown;
 import static org.junit.Assert.assertNotNull;
-
 
 /**
  * Created by Mohsen on 08/01/2017.
@@ -38,9 +37,6 @@ public class LoginActivityRobolectricTest {
 
     @Test
     public void testShowOfflineMessage() throws Exception {
-        activity.showOfflineMessage(false);
-        assertSnackbarIsShown(R.string.offline_message);
-
         activity.showOfflineMessage(true);
         assertAlertDialogIsShown(R.string.utils__no_connection_title, R.string.utils__no_connection);
     }
